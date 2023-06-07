@@ -21,8 +21,8 @@ import type {
 } from '../../types'
 import { serializeUserStakingId, supportsUndelegations, toValidatorId } from '../../utils'
 import {
-  SHAPESHIFT_COSMOS_VALIDATOR_ADDRESS,
-  SHAPESHIFT_OSMOSIS_VALIDATOR_ADDRESS,
+  INCUBUS-NETWORK_COSMOS_VALIDATOR_ADDRESS,
+  INCUBUS-NETWORK_OSMOSIS_VALIDATOR_ADDRESS,
 } from './constants'
 import type { UserUndelegation } from './types'
 
@@ -34,9 +34,9 @@ export const makeUniqueValidatorAccountIds = ({
   isOsmoStakingEnabled: Boolean
 }): ValidatorId[] =>
   uniq([
-    toValidatorId({ account: SHAPESHIFT_COSMOS_VALIDATOR_ADDRESS, chainId: cosmosChainId }),
+    toValidatorId({ account: INCUBUS-NETWORK_COSMOS_VALIDATOR_ADDRESS, chainId: cosmosChainId }),
     ...(isOsmoStakingEnabled
-      ? [toValidatorId({ account: SHAPESHIFT_OSMOSIS_VALIDATOR_ADDRESS, chainId: osmosisChainId })]
+      ? [toValidatorId({ account: INCUBUS-NETWORK_OSMOSIS_VALIDATOR_ADDRESS, chainId: osmosisChainId })]
       : []),
     ...flatMapDeep(cosmosSdkAccounts, cosmosSdkAccount => [
       cosmosSdkAccount.chainSpecific.delegations.map(delegation =>
@@ -133,9 +133,9 @@ export const makeAccountUserData = ({
 export const getDefaultValidatorAddressFromChainId = (chainId: ChainId) => {
   switch (chainId) {
     case cosmosChainId:
-      return SHAPESHIFT_COSMOS_VALIDATOR_ADDRESS
+      return INCUBUS-NETWORK_COSMOS_VALIDATOR_ADDRESS
     case osmosisChainId:
-      return SHAPESHIFT_OSMOSIS_VALIDATOR_ADDRESS
+      return INCUBUS-NETWORK_OSMOSIS_VALIDATOR_ADDRESS
     default:
       throw new Error(`chainId ${chainId} is not a valid Cosmos SDK chainId`)
   }
