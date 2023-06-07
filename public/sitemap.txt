@@ -1,0 +1,11 @@
+https://app.incubus.network
+https://app.incubus.network/#/connect-wallet
+https://app.incubus.network/#/demo/merlin
+https://app.incubus.network/#/demo/defi
+https://app.incubus.network/#/demo/defi/earn
+https://app.incubus.network/#/demo/trade
+https://app.incubus.network/#/demo/assets
+https://app.incubus.network/#/demo/assets/bip122:000000000019d6689c085ae165831e93/slip44:0
+https://app.incubus.network/#/demo/assets/eip155:1/slip44:60
+https://app.incubus.network/#/demo/assets/eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d
+https://app.incubus.network/#/demo/assets/eip155:1/erc20:0xdc49108ce5c57bc3408c3a5e95f3d864ec386ed3
